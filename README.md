@@ -83,10 +83,11 @@ Erstellt eine Datei `.github/workflows/ci.yml`:
 
 **Die Pipeline soll:**
 1. Bei jedem Push auf `main` ausgeführt werden
-2. Java 17 einrichten
-3. Dependencies installieren
-4. Code kompilieren
-5. Tests ausführen
+2. Die Länge eines vorher angelegten Secrets in der console ausgeben
+3. Java 17 einrichten
+4. Dependencies installieren
+5. Code kompilieren
+6. Tests ausführen
 
 ### Aufgabe 1.7: Workflow committen und ausführen
 
