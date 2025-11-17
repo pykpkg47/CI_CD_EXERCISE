@@ -36,6 +36,22 @@ jobs:
             name: ueb_package
             path: target/*.jar
 
+        - name: Login to GitHub Container Registry
+          uses: docker/login-action@v3
+          with:
+            registry: ghcr.io
+            username: ${{github.actor}}
+            password: ${{ secrets.GITHUB_TOKEN }}
+
+        - name: Build and push
+          uses: docker/build-push-action@v6
+          with:
+            push: true
+            tags: ghcr.io/pykpkg47/calculator-api:latest  
+
+
+        
+
 
 
 
