@@ -2,7 +2,7 @@ name: "ueb"
 on: 
     push:
         branches:
-            - master
+            - main
 
     workflow_dispatch: 
 
@@ -23,7 +23,6 @@ jobs:
           run: mvn dependency:resolve
 
         - name: "compile "
-        
           run: mvn compile
 
         - name: " run test "
