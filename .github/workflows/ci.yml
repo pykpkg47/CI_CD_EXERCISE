@@ -20,14 +20,15 @@ jobs:
             cache: maven
 
         - name: "install  dependecies"
-          run: mvn --mvn dependency:resolve
+          run: mvn dependency:resolve
 
         - name: "compile "
+        
           run: mvn compile
 
         - name: " run test "
           run: mvn test
-          
+
 
 
 
