@@ -27,6 +27,15 @@ jobs:
 
         - name: " run test "
           run: mvn test
+        
+        - name: "buidl package "
+          run: mvn package -Dmaven.test.skip
+
+        - uses: actions/upload-artifact@v4
+          with: 
+            name: ueb_package
+            path: target/*.jar
+
 
 
 
